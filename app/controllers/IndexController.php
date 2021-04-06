@@ -3,6 +3,9 @@ class IndexController
 {
     private $View;
 
+    /**
+     * Create new view, set model to view and render page
+     */
     public function __construct()
     {
         $this->View = new IndexView();

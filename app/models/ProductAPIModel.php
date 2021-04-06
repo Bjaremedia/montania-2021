@@ -22,7 +22,11 @@ class ProductAPIModel
         $this->getPriceDifferences();
     }
 
-    public function getTargetUrl()
+    /**
+     * Getter for target URL
+     * @return string Target URL string
+     */
+    public function getTargetUrl(): string
     {
         return $this->target_url;
     }
@@ -49,7 +53,7 @@ class ProductAPIModel
      * Get specified stats
      * @return mixed Null if key doesn't exist, else return value for stat
      */
-    public function getStats(string $key = null)
+    public function getStats(string $key = null): mixed
     {
         if ($key === null) {
             return $this->stats;
@@ -60,7 +64,7 @@ class ProductAPIModel
     /**
      * Count products for each category
      * @param string|null $category Category name/id (count products not in a category if input === null)
-     * @return int Count
+     * @return int Count for products in category
      */
     public function countProductsInCategory($category): int
     {
@@ -98,7 +102,7 @@ class ProductAPIModel
 
     /**
      * Load products from target url property, expects JSON at source
-     * @return array Decoded json array with products
+     * Save loaded data to products property
      */
     private function loadProductsFromJson(): void
     {

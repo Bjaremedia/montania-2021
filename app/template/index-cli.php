@@ -1,7 +1,4 @@
 <?php
-/**
- * Header
- */
 echo PHP_EOL;
 echo 'Antal artiklar: ' . $this->ProductAPIModel->getProductCount() . ' st' . PHP_EOL;
 echo 'Lägsta pris: ' . $this->ProductAPIModel->getStats('price_lowest') . ' kr (inkl. moms)' . PHP_EOL;
@@ -10,14 +7,10 @@ if ($this->ProductAPIModel->getStats('price_lowest') == 0) {
 }
 echo 'Högsta pris: ' . $this->ProductAPIModel->getStats('price_highest') . ' kr (inkl. moms)' . PHP_EOL;
 echo PHP_EOL;
-
 echo 'PRODUKTLISTA' . PHP_EOL;
 echo 'Hämtad från: ' . $this->ProductAPIModel->getTargetUrl() . PHP_EOL;
 echo PHP_EOL;
 
-/**
- * Body
- */
 $category = null;
 foreach ($this->ProductAPIModel->getProducts() as $product) {
     if ((isset($product->artikelkategorier_id) && $category !== $product->artikelkategorier_id)
