@@ -53,7 +53,7 @@ class ProductAPIModel
      * Get specified stats
      * @return mixed Null if key doesn't exist, else return value for stat
      */
-    public function getStats(string $key = null): mixed
+    public function getStats(string $key = null)
     {
         if ($key === null) {
             return $this->stats;
