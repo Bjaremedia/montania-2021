@@ -1,4 +1,6 @@
 <?php
+echo 'Montania Prov - 2021';
+echo PHP_EOL;
 echo PHP_EOL;
 echo 'Antal artiklar: ' . $this->ProductAPIModel->getProductCount() . ' st' . PHP_EOL;
 echo 'Lägsta pris: ' . $this->ProductAPIModel->getStats('price_lowest') . ' kr (inkl. moms)' . PHP_EOL;
@@ -9,7 +11,6 @@ echo 'Högsta pris: ' . $this->ProductAPIModel->getStats('price_highest') . ' kr
 echo PHP_EOL;
 echo 'PRODUKTLISTA' . PHP_EOL;
 echo 'Hämtad från: ' . $this->ProductAPIModel->getTargetUrl() . PHP_EOL;
-echo PHP_EOL;
 
 $category = null;
 foreach ($this->ProductAPIModel->getProducts() as $product) {
@@ -17,7 +18,7 @@ foreach ($this->ProductAPIModel->getProducts() as $product) {
         || (!isset($product->artikelkategorier_id) && $category !== null)
     ) {
         $category = isset($product->artikelkategorier_id) ? $product->artikelkategorier_id : null;
-        echo ' --- ' . (isset($product->artikelkategorier_id) ? ucfirst(strtolower($product->artikelkategorier_id)) : 'Artikelkategori saknas') . ' --- ' . PHP_EOL;
+        echo PHP_EOL . ' --- ' . (isset($product->artikelkategorier_id) ? ucfirst(strtolower($product->artikelkategorier_id)) : 'Artikelkategori saknas') . ' --- ' . PHP_EOL;
     }
     echo $product->id . '   ';
     echo (isset($product->artiklar_benamning) ? $product->artiklar_benamning : 'Artikelbenämning saknas!') . '   ';
