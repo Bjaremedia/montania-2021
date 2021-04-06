@@ -1,0 +1,150 @@
+/** GLOBAL CSS **/
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    min-width: fit-content;
+}
+
+/** REUSABLE CLASSES **/
+.align-right {
+    text-align: right !important;
+}
+
+
+/** HEADER **/
+#header {
+    background-color: #000000;
+    border-bottom: #D51317 solid 6px;
+}
+
+#header-logotype {
+    width: 30em;
+    margin: 0 auto;
+    padding: 3em 0 1em 0;
+}
+
+#header-logotype img {
+    width: 100%;
+}
+
+#header-logotype p {
+    font-size: 1.4em;
+    text-align: right;
+    top: -37px;
+    position: relative;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+
+/** MAIN CONTENT **/
+#wrapper {
+    width: 100%;
+}
+
+#content {
+    max-width: 1280px;
+    width: 100%;
+    margin: 2.5em auto;
+}
+
+#content h1{
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #AAA;
+}
+
+/* MAIN CONTENT: Product short info list */
+#product-short-info-list {
+    margin: 0;
+    padding: 0.1em 0 0 1em;
+    list-style-type: circle;
+}
+
+#product-short-info-list li:not(:first-child){
+    padding-top: 0.4em;
+}
+
+#script-status li {
+    padding: 0.2em 0;
+}
+
+#product-short-info-vat {
+    font-size: 0.9em;
+    margin: 1em 0 2em 0;
+}
+
+/* MAIN CONTENT: Product table */
+#product-table {
+    border-bottom: 3px dashed #DDDDDD;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#product-table-header {
+    border: 0 !important;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+#product-table th {
+    padding: 0.6em 1em;
+}
+
+#product-table td {
+    padding: 0.4em 1em 0.4em 1em;
+}
+
+#product-table tr {
+    border-bottom: dotted 1px #DDDDDD;
+}
+
+.product-category-cell {
+    font-weight: bold;
+}
+
+.product-new-category-row:nth-child(1n+3) {
+    border-top: 3px dashed #DDDDDD;
+}
+
+.product-missing-data {
+    font-style: italic;
+    font-weight: bold;
+    color: #D51317;
+}
+
+.product-out-of-stock {
+    color: #D51317;
+}
+
+.product-in-stock {
+    color: #087500;
+}
+
+.product-article-no {
+    font-size: 0.8em;
+}
+
+/* MAIN CONTENT: Script status */
+#script-status {
+    list-style: none;
+    padding: 0;
+    font-size: 0.86em;
+    margin-top: 2em;
+    color: #333333;
+}
+
+
+/** FOOTER **/
+#footer {
+    margin: 1em 0 2em 0;
+}
+
+#footer address {
+    width: 30em;
+    margin: 0 auto;
+    font-size: 0.8em;
+    text-align: center;
+    color: #555555;
+    font-style: normal;
+}
